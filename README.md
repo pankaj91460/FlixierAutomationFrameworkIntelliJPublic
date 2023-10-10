@@ -1,2 +1,2 @@
 # FlixierAutomationFrameworkIntelliJPublic
-Automation Framework for https://flixier.com/ application.
+Automation Framework for https://flixier.com/ web-application.
