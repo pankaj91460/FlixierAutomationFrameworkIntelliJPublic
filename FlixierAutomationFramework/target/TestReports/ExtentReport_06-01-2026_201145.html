@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 6, 2026 06:40:21 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 6, 2026 08:11:45 PM</span></a>
 </li>
 </ul>
 </div>
@@ -92,7 +92,7 @@
           <div class="test-detail">
             <p class="name">verifyOptionsOnLeftNavigationPane</p>
             <p class="text-sm">
-              <span>6:40:27 PM</span> / <span>00:00:03:806</span>
+              <span>8:11:49 PM</span> / <span>00:00:30:037</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -101,9 +101,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">verifyOptionsOnLeftNavigationPane</h5>
-<span class='badge badge-success'>01.06.2026 6:40:27 PM</span>
-<span class='badge badge-danger'>01.06.2026 6:40:30 PM</span>
-<span class='badge badge-default'>00:00:03:806</span>
+<span class='badge badge-success'>01.06.2026 8:11:49 PM</span>
+<span class='badge badge-danger'>01.06.2026 8:12:19 PM</span>
+<span class='badge badge-default'>00:00:30:037</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -117,29 +117,31 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:40:27 PM</td>
+        <td>8:11:49 PM</td>
         <td>
-          Test started at: 06-01-2026 18:40:27
+          Test started at: 06-01-2026 20:11:49
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:40:30 PM</td>
+        <td>8:12:19 PM</td>
         <td>
-          Test failed at: 06-01-2026 18:40:30
+          Test failed at: 06-01-2026 20:12:19
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:40:30 PM</td>
+        <td>8:12:19 PM</td>
         <td>
-          <details><summary><b><font color='red'>Click to see full stack trace</font></b></summary><pre>org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+          <details><summary><b><font color='red'>Click to see full stack trace</font></b></summary><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.170)
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [60b49fe7-8d1f-4dbd-a30f-01ce136bde74, findElement {using=css selector, value=#email}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18244, moz:profile: C:\Users\Babbu\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 60b49fe7-8d1f-4dbd-a30f-01ce136bde74
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [56be8f5fec7c7b1464d76c9c3ba7aaf1, findElement {using=css selector, value=button[class = 'py-2-5 px-5 btn mt-3 w-100 d-block btn btn-primary']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\Babbu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64602}, goog:processID: 12544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64602/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56be8f5fec7c7b1464d76c9c3ba7aaf1
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -161,9 +163,11 @@ Session ID: 60b49fe7-8d1f-4dbd-a30f-01ce136bde74
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-	at framework.Drivers.findElementUntilElementVisible(Drivers.java:164)
-	at pages.LoginPage.loginWithExistingUser(LoginPage.java:54)
+	at framework.Drivers.findElementUntilElementClickable(Drivers.java:175)
+	at pages.LoginPage.loginWithExistingUser(LoginPage.java:55)
 	at tests.AccountHomePageTests.verifyOptionsOnLeftNavigationPane(AccountHomePageTests.java:23)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -239,7 +243,7 @@ Session ID: 60b49fe7-8d1f-4dbd-a30f-01ce136bde74
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:40:27 PM</td>
+<td>20:11:49 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>verifyOptionsOnLeftNavigationPane</a>
 </td>
@@ -261,13 +265,13 @@ Session ID: 60b49fe7-8d1f-4dbd-a30f-01ce136bde74
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 6, 2026 06:40:21 PM</h3>
+<h3>Jan 6, 2026 08:11:45 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 6, 2026 06:40:30 PM</h3>
+<h3>Jan 6, 2026 08:12:19 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -337,7 +341,7 @@ Session ID: 60b49fe7-8d1f-4dbd-a30f-01ce136bde74
 </div></div>
 <script>
 var timeline = {
-"verifyOptionsOnLeftNavigationPane":3.806
+"verifyOptionsOnLeftNavigationPane":30.037
 };
 </script>
 <div class="row">

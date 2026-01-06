@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 6, 2026 06:25:25 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 6, 2026 08:08:04 PM</span></a>
 </li>
 </ul>
 </div>
@@ -92,7 +92,7 @@
           <div class="test-detail">
             <p class="name">verifyOptionsOnLeftNavigationPane</p>
             <p class="text-sm">
-              <span>6:25:27 PM</span> / <span>00:00:00:035</span>
+              <span>8:08:07 PM</span> / <span>00:00:45:858</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -101,9 +101,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">verifyOptionsOnLeftNavigationPane</h5>
-<span class='badge badge-success'>01.06.2026 6:25:27 PM</span>
-<span class='badge badge-danger'>01.06.2026 6:25:27 PM</span>
-<span class='badge badge-default'>00:00:00:035</span>
+<span class='badge badge-success'>01.06.2026 8:08:07 PM</span>
+<span class='badge badge-danger'>01.06.2026 8:08:52 PM</span>
+<span class='badge badge-default'>00:00:45:858</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -117,25 +117,57 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:25:27 PM</td>
+        <td>8:08:07 PM</td>
         <td>
-          Test started at: 06-01-2026 18:25:27
+          Test started at: 06-01-2026 20:08:07
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:25:27 PM</td>
+        <td>8:08:52 PM</td>
         <td>
-          Test failed at: 06-01-2026 18:25:27
+          Test failed at: 06-01-2026 20:08:52
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:25:27 PM</td>
+        <td>8:08:52 PM</td>
         <td>
-          <details><summary><b><font color='red'>Click to see full stack trace</font></b></summary><pre>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "framework.Drivers.driver" is null
-	at framework.Drivers.launchLoginPage(Drivers.java:262)
-	at tests.AccountHomePageTests.verifyOptionsOnLeftNavigationPane(AccountHomePageTests.java:21)
+          <details><summary><b><font color='red'>Click to see full stack trace</font></b></summary><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.170)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ce8a4df382570a608186a07d5cf9e17e, findElement {using=css selector, value=#email}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\Babbu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61896}, goog:processID: 5396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61896/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ce8a4df382570a608186a07d5cf9e17e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4461)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:173)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
+	at java.base/java.lang.String.valueOf(String.java:4461)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:173)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:227)
+	at framework.Drivers.findElementUntilElementVisible(Drivers.java:164)
+	at pages.LoginPage.loginWithExistingUser(LoginPage.java:54)
+	at tests.AccountHomePageTests.verifyOptionsOnLeftNavigationPane(AccountHomePageTests.java:23)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -210,7 +242,7 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:25:27 PM</td>
+<td>20:08:07 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>verifyOptionsOnLeftNavigationPane</a>
 </td>
@@ -232,13 +264,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 6, 2026 06:25:25 PM</h3>
+<h3>Jan 6, 2026 08:08:04 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 6, 2026 06:25:27 PM</h3>
+<h3>Jan 6, 2026 08:08:52 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -308,7 +340,7 @@
 </div></div>
 <script>
 var timeline = {
-"verifyOptionsOnLeftNavigationPane":0.035
+"verifyOptionsOnLeftNavigationPane":45.858
 };
 </script>
 <div class="row">
