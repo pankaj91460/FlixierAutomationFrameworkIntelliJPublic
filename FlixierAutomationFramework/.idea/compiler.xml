@@ -10,8 +10,5 @@
         <module name="FlixierAutomationFramework" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FlixierAutomationFramework" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

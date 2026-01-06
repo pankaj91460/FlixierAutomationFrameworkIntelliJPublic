@@ -1,0 +1,233 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3600), pid=14908, tid=18260
+#
+# JRE version:  (21.0+35) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21+35-2513, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\lib\idea_rt.jar=62404:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket62403 @w@C:\Users\Babbu\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\Babbu\AppData\Local\Temp\idea_testng.tmp
+
+Host: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5124)
+Time: Tue Jan  6 17:32:14 2026 India Standard Time elapsed time: 0.031856 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000253b4a71a60):  JavaThread "Unknown thread" [_thread_in_vm, id=18260, stack(0x0000008510e00000,0x0000008510f00000) (1024K)]
+
+Stack: [0x0000008510e00000,0x0000008510f00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6c8d39]
+V  [jvm.dll+0x854091]
+V  [jvm.dll+0x85630e]
+V  [jvm.dll+0x8569e3]
+V  [jvm.dll+0x2809a6]
+V  [jvm.dll+0x6c5425]
+V  [jvm.dll+0x6b9e1a]
+V  [jvm.dll+0x3555ba]
+V  [jvm.dll+0x35d206]
+V  [jvm.dll+0x3adf6e]
+V  [jvm.dll+0x3ae218]
+V  [jvm.dll+0x328fcc]
+V  [jvm.dll+0x329b5b]
+V  [jvm.dll+0x81c699]
+V  [jvm.dll+0x3bb2a1]
+V  [jvm.dll+0x805688]
+V  [jvm.dll+0x44ed9e]
+V  [jvm.dll+0x4506a1]
+C  [jli.dll+0x52a3]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1259d]
+C  [ntdll.dll+0x5af38]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff808bd7b48, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x00000253b6c302c0 WorkerThread "GC Thread#0"                     [id=6668, stack(0x0000008510f00000,0x0000008511000000) (1024K)]
+  0x00000253b6c40970 ConcurrentGCThread "G1 Main Marker"            [id=9572, stack(0x0000008511000000,0x0000008511100000) (1024K)]
+  0x00000253b6c41530 WorkerThread "G1 Conc#0"                       [id=17396, stack(0x0000008511100000,0x0000008511200000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff80834c097]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ff808c48648] Heap_lock - owner thread: 0x00000253b4a71a60
+
+Heap address: 0x0000000084200000, size: 1982 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000084200000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff808731939]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.022 Loaded shared library C:\Users\Babbu\.jdks\openjdk-21\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7fb7c0000 - 0x00007ff7fb7ce000 	C:\Users\Babbu\.jdks\openjdk-21\bin\java.exe
+0x00007ff87b270000 - 0x00007ff87b487000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff879c30000 - 0x00007ff879cf4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff878570000 - 0x00007ff878943000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff878c00000 - 0x00007ff878d11000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff84df90000 - 0x00007ff84dfa8000 	C:\Users\Babbu\.jdks\openjdk-21\bin\jli.dll
+0x00007ff84def0000 - 0x00007ff84df0b000 	C:\Users\Babbu\.jdks\openjdk-21\bin\VCRUNTIME140.dll
+0x00007ff8792b0000 - 0x00007ff879461000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff878540000 - 0x00007ff878566000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff862a90000 - 0x00007ff862d28000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.5124_none_270e8f4f7386d69d\COMCTL32.dll
+0x00007ff87a480000 - 0x00007ff87a4a9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff878420000 - 0x00007ff87853b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff878380000 - 0x00007ff87841a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff879110000 - 0x00007ff8791b7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff879270000 - 0x00007ff8792a1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff852480000 - 0x00007ff85248c000 	C:\Users\Babbu\.jdks\openjdk-21\bin\vcruntime140_1.dll
+0x00007ff817930000 - 0x00007ff8179be000 	C:\Users\Babbu\.jdks\openjdk-21\bin\msvcp140.dll
+0x00007ff808010000 - 0x00007ff808d23000 	C:\Users\Babbu\.jdks\openjdk-21\bin\server\jvm.dll
+0x00007ff879800000 - 0x00007ff8798b1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff879e80000 - 0x00007ff879f28000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff878950000 - 0x00007ff878978000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ff879d00000 - 0x00007ff879e14000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff879780000 - 0x00007ff8797f1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8771d0000 - 0x00007ff87721d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ff8730d0000 - 0x00007ff873104000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8704b0000 - 0x00007ff8704ba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8771a0000 - 0x00007ff8771b3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff877470000 - 0x00007ff877488000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff84ced0000 - 0x00007ff84ceda000 	C:\Users\Babbu\.jdks\openjdk-21\bin\jimage.dll
+0x00007ff875c90000 - 0x00007ff875ec2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff879f30000 - 0x00007ff87a2c2000 	C:\WINDOWS\System32\combase.dll
+0x00007ff879980000 - 0x00007ff879a57000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff85c560000 - 0x00007ff85c592000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff878e90000 - 0x00007ff878f0b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff870610000 - 0x00007ff87061f000 	C:\Users\Babbu\.jdks\openjdk-21\bin\instrument.dll
+0x00007ff83b9e0000 - 0x00007ff83b9ff000 	C:\Users\Babbu\.jdks\openjdk-21\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Babbu\.jdks\openjdk-21\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.5124_none_270e8f4f7386d69d;C:\Users\Babbu\.jdks\openjdk-21\bin\server
+
+VM Arguments:
+jvm_args: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\lib\idea_rt.jar=62404:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket62403 @w@C:\Users\Babbu\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\Babbu\AppData\Local\Temp\idea_testng.tmp
+java_class_path (initial): C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\plugins\testng\lib\testng-rt.jar;E:\ProgramsData\IntelliJProjects\FlixierProjectsViaSourceTree\FlixierAutomationGitHubPublic\FlixierAutomationFramework\target\test-classes;E:\ProgramsData\IntelliJProjects\FlixierProjectsViaSourceTree\FlixierAutomationGitHubPublic\FlixierAutomationFramework\target\classes;C:\Users\Babbu\.m2\repository\org\apache\poi\poi\5.2.2\poi-5.2.2.jar;C:\Users\Babbu\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Babbu\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Babbu\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Babbu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Babbu\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-java\4.11.0\selenium-java-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-api\4.11.0\selenium-api-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.11.0\selenium-chrome-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\Babbu\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Babbu\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Babbu\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Babbu\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Babbu\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Babbu\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Babbu\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.11.0\selenium-chromium-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-json\4.11.0\selenium-json-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.11.0\selenium-manager-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v113\4.11.0\selenium-devtools-v113-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v114\4.11.0\selenium-devtools-v114-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v115\4.11.0\selenium-devtools-v115-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.11.0\selenium-devtools-v85-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.11.0\selenium-edge-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.11.0\selenium-firefox-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-http\4.11.0\selenium-http-4.11.0.jar;C:\Users\Babbu\.m2\repository\dev\failsafe\failsafe\3.3.1\failsafe-3.3.1.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.11.0\selenium-ie-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.11.0\selenium-remote-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-buffer\4.1.92.Final\netty-buffer-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-codec-http\4.1.92.Final\netty-codec-http-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-codec\4.1.92.Final\netty-codec-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-handler\4.1.92.Final\netty-handler-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-common\4.1.92.Final\netty-common-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.92.Final\netty-transport-classes-epoll-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.92.Final\netty-transport-classes-kqueue-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-native-epoll\4.1.92.Final\netty-transport-native-epoll-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.92.Final\netty-transport-native-kqueue-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.92.Final\netty-transport-native-unix-common-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport\4.1.92.Final\netty-transport-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-resolver\4.1.92.Final\netty-resolver-4.1.92.Final.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-api\1.26.0\opentelemetry-api-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-context\1.26.0\opentelemetry-context-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.26.0\opentelemetry-exporter-logging-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.26.0\opentelemetry-sdk-metrics-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.26.0-alpha\opentelemetry-extension-incubator-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.26.0-alpha\opentelemetry-sdk-logs-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-api-logs\1.26.0-alpha\opentelemetry-api-logs-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.26.0-alpha\opentelemetry-api-events-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.26.0\opentelemetry-sdk-common-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.26.0\opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.26.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.26.0\opentelemetry-sdk-trace-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.26.0\opentelemetry-sdk-1.26.0.jar;C:\Users\Babbu\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.26.0-alpha\opentelemetry-semconv-1.26.0-alpha.jar;C:\Users\Babbu\.m2\repository\net\bytebuddy\byte-buddy\1.14.4\byte-buddy-1.14.4.jar;C:\Users\Babbu\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Babbu\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\Babbu\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\Babbu\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\Babbu\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\Babbu\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.11.0\selenium-safari-driver-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\seleniumhq\selenium\selenium-support\4.11.0\selenium-support-4.11.0.jar;C:\Users\Babbu\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Babbu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Babbu\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Babbu\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Babbu\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\Users\Babbu\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Babbu\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\Users\Babbu\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\Users\Babbu\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\Users\Babbu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Babbu\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\Babbu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Babbu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Babbu\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\Babbu\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\Babbu\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Babbu\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\Users\Babbu\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\Users\Babbu\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\Users\Babbu\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Babbu\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Babbu\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Babbu\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Babbu\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Babbu\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Babbu\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Babbu\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Babbu\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Babbu\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Babbu\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\Babbu\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\Babbu\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\Babbu\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.20.0\log4j-slf4j-impl-2.20.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2078277632                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2078277632                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-17\bin;%MAVEN_BIN%;C:\Program Files\Git\cmd;C:\Users\Babbu\AppData\Local\Microsoft\WindowsApps;C:\Users\Babbu\AppData\Roaming\npm;C:\Users\Babbu\AppData\Local\Programs\Microsoft VS Code\bin;C:\apache-maven-3.9.4\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.3\bin;;C:\Program Files\Java\jdk-17.0.1\bin;D:\ProgramInstallations\Sdk\tools;D:\ProgramInstallations\Sdk\platform-tools;D:\ProgramInstallations\Sdk\build-tools;
+USERNAME=Babbu
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\Babbu\AppData\Local\Temp
+TEMP=C:\Users\Babbu\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.5124)
+OS uptime: 0 days 0:22 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0xbc, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ibt, cet_ss, avx512_ifma
+Processor Information for all 8 processors :
+  Max Mhz: 2419, Current Mhz: 2419, Mhz Limit: 2419
+
+Memory: 4k page, system-wide physical 7926M (981M free)
+TotalPageFile size 11987M (AvailPageFile size 106M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 184M
+
+vm_info: OpenJDK 64-Bit Server VM (21+35-2513) for windows-amd64 JRE (21+35-2513), built on 2023-08-09T20:25:10Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
