@@ -1,6 +1,7 @@
 package tests;
 
 import framework.Drivers;
+import org.openqa.selenium.devtools.v113.fedcm.model.Account;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AccountHomePage;
@@ -31,18 +32,20 @@ public class AccountHomePageTests extends Drivers {
         Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.home_icon).isDisplayed());
         //verify presence of Home text
         Assert.assertTrue(findText(AccountHomePage.home_str).isDisplayed());
-        //verify presence of Quick Tools icon
-        Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.quick_tools_icon).isDisplayed());
-        //verify presence of Quick Tools string
-        Assert.assertTrue(findText(AccountHomePage.quick_tools_str).isDisplayed());
-        //verify presence of Billing and Plans icon
-        Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.billing_and_plans_icon).isDisplayed());
-        //verify presence of Billing and Plans string
-        Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.billing_and_plans_text).isDisplayed());
         //Verify presence of Storage text
         Assert.assertTrue(findText(AccountHomePage.storage_str).isDisplayed());
         //verify presence of Export Time text
         Assert.assertTrue(findText(AccountHomePage.export_time).isDisplayed());
+        //verify settings and billing string
+        Assert.assertTrue(findText(AccountHomePage.settings_and_billing).isDisplayed());
+        //verify settings and billing icon
+        Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.settins_and_billing_icon).isDisplayed());
+        //verify AI Credits string
+        Assert.assertTrue(findExactText(AccountHomePage.ai_credits_str).isDisplayed());
+        //verify All Tools String
+        Assert.assertTrue(findText(AccountHomePage.all_tools_str).isDisplayed());
+        //verify All Tools icon
+        Assert.assertTrue(findElementUntilElementVisible(AccountHomePage.all_tools_icon).isDisplayed());
     }
 
     /**

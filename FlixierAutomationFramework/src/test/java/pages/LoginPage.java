@@ -10,13 +10,13 @@ public class LoginPage extends Drivers {
     @FindBy(css = "#email")
     public static WebElement email_text_field;
     //Login button
-    @FindBy(css = "button[class = 'py-2-5 px-5 btn mt-3 w-100 d-block btn btn-primary']")
+    @FindBy(css = "button[type='submit']")
     public static WebElement login_button;
     //password field
     @FindBy(css = "#password")
     public static WebElement password_text_field;
     //profile icon after successful login
-    @FindBy(css = "[class = \"navbar__user-menu is--hidden-from-menu navbar-nav d-flex flex-row justify-content-between align-items-center\"]>li[class = \"nav-item dropdown user-profile\"]")
+    @FindBy(css = "div[class = 'tooltip-wrapper relative']>[class = 'rounded-circle h-full w-full']")
     public static WebElement profile_icon;
     //Connect With Google button
     @FindBy(id ="login-google")
