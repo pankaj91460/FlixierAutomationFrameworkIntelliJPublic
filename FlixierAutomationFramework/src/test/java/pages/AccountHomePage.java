@@ -9,10 +9,10 @@ import org.testng.Assert;
 
 public class AccountHomePage extends Drivers {
     //My Team Element (icon + text)
-    @FindBy(css = "[class = 'btn d-flex justify-content-between align-items-center dropdown-toggle w-100 pr-0 no-caret team-switcher-button']")
+    @FindBy(css = "span[title='My Team']")
     public static WebElement my_team;
     //Home icon
-    @FindBy(css = "[class = 'mr-2 svg-inline--fa fa-home fa-w-18 fa-fw']")
+    @FindBy(css = "svg[class = 'text-sm svg-inline--fa fa-house text-white']>path")
     public static WebElement home_icon;
     //Quick Tools icon
     @FindBy(css = "[class = 'mr-2 svg-inline--fa fa-bolt fa-w-10 fa-fw']")
@@ -221,6 +221,12 @@ public class AccountHomePage extends Drivers {
     //Frequently Asked Questions section
     @FindBy(css = "[class = 'faq w-100 mt-5 text-white']")
     public static WebElement frequently_asked_questions_section_in_overview_tab;
+    //Settings & Billing icon
+    @FindBy(css = "div[class='mr-1 flex h-5 w-5 items-center justify-center px-1']")
+    public static WebElement settins_and_billing_icon;
+    //All Tools icon
+    @FindBy(xpath="//*[local-name()='svg' and @class='text-sm svg-inline--fa fa-sparkles text-gray-100']")
+    public static WebElement all_tools_icon;
 
 
     //Free Plan string
@@ -267,6 +273,12 @@ public class AccountHomePage extends Drivers {
     public static final String portuguese_str = "Português";
     //Deutsch string
     public static final String deutsch_str = "Deutsch";
+    //Settings & Billing String
+    public static final String settings_and_billing = "Settings & Billing";
+    //AI Credit String
+    public static final String ai_credits_str = "AI Credits";
+    //All Tools String
+    public static final String all_tools_str = "All Tools";
 
     //initialize page factory classes with elements
     public AccountHomePage(){
